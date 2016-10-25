@@ -1,0 +1,27 @@
+{
+  "name": "touchup-typed",
+  "version": "0.1.0",
+  "description": "touchup written in TypeScript",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "npm run clean && tsc",
+    "build:watch": "npm run build -- --watch",
+    "build:demo": "cd demo && npm install",
+    "start": "npm run build:watch",
+    "start:demo": "npm run build:demo && cd demo && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preversion": "npm run prepublish",
+    "prepublish": "npm run build",
+    "publish": "npm run gh-pages",
+    "gh-pages": "gh-pages -d demo/dist"
+  },
+  "author": "Giff Song <giff.song@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^0.11.0",
+    "rimraf": "^2.5.4",
+    "typescript": "^2.0.3"
+  }
+}

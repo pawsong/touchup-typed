@@ -19,6 +19,10 @@
   },
   "author": "Giff Song <giff.song@gmail.com>",
   "license": "MIT",
+  "files": [
+    "src",
+    "lib"
+  ],
   "devDependencies": {
     "gh-pages": "^0.11.0",
     "rimraf": "^2.5.4",
